@@ -1,0 +1,26 @@
+{
+  "name": "@huk/commit-emoji",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "release": "release-it"
+  },
+  "release-it": {
+    "npm": {
+      "publish": false
+    }
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "inquirer": "^9.1.4",
+    "ora": "^6.1.2",
+    "progress": "^2.0.3",
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/shelljs": "^0.8.11",
+    "@vitest/coverage-c8": "^0.29.1",
+    "vitest": "^0.29.1"
+  }
+}
