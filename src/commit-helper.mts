@@ -2,6 +2,7 @@
 import chalk from 'chalk';
 import fuzzy from 'fuzzy';
 import inquirer from 'inquirer';
+import { buildCommitMessage } from './commit/message.mjs';
 import {emoji} from './constant/emoji.mjs';
 import inquirerPrompt from 'inquirer-autocomplete-prompt';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -35,14 +36,12 @@ interface CommitMessage {
 }
 
 function doCommit(message: CommitMessage) {
-  let msg = `${message.type} ${message.subject}\n`;
-  if (message.body) {
-    msg += '\n' + message.body + '\n';
-  }
-  if (message.footer) {
-    msg += '\n' + message.footer + '\n';
-  }
-
+  const msg = buildCommitMessage({
+    type: message.type,
+    subject: message.subject,
+    body: message.body,
+    footer: message.footer
+  })
   return run(process.cwd(), `git commit -m '${msg}'`);
 }
 

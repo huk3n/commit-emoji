@@ -3,5 +3,9 @@
 import { runMessageValidate } from './commit/validate.mjs';
 
 if (process.argv[2]) {
-  runMessageValidate(process.argv[2]);
+  runMessageValidate(process.argv[2])
+    .catch(err => {
+      console.log(err)
+      process.exit(-1)
+    })
 }

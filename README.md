@@ -2,29 +2,10 @@
 
 git commit 的帮助程序，可以交互式的输入 commit message。
 
-
 ## Features
 
 - commit helper
 - check commit message
-
-## Installation
-
-```bash
-```
-
-## Usage/Examples
-
-
-## Demo
-
-
-## Documentation
-
-
-## FAQ
-
-#### Question 1
 
 ## License
 

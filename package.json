@@ -5,8 +5,12 @@
     "commit-helper": "./lib/commit-helper.mjs",
     "commit-check": "./lib/commit-check.mjs"
   },
-  "files": ["./lib"],
+  "files": [
+    "./lib"
+  ],
   "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "release": "release-it",
     "prepare": "husky install",
     "clean": "tsc --build --clean",
@@ -28,9 +32,11 @@
     "shelljs": "^0.8.5"
   },
   "devDependencies": {
-    "husky": "^8.0.1",
-    "@types/shelljs": "^0.8.11",
     "@types/inquirer": "^9.0.3",
-    "@types/inquirer-autocomplete-prompt": "^3.0.0"
+    "@types/inquirer-autocomplete-prompt": "^3.0.0",
+    "@types/shelljs": "^0.8.11",
+    "husky": "^8.0.1",
+    "@vitest/coverage-c8": "^0.29.1",
+    "vitest": "^0.29.1"
   }
 }
